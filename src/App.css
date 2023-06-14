@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-wrapper{
+  min-width: 1200px;
+}
+
+/*Navbar*/
+.link{
+  font-size: 1rem;
+  color: black;
+  width: 5.5rem;
+  display: inline-block;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.main-navbar{
+  display: flex;
+  position: relative;
+  align-items: baseline;
+  justify-content: space-around;
+  height: 8rem;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding-top: 2.5rem;
+}
+
+.dummy{
+  background-color: red;
+  opacity: 0;
+}
+
+.navbar{
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h1.link {
+  font-size: 3rem;
+  width: auto;
+}
+
+.navbar h1{
+  font-family: 'Merriweather', serif;
+}
+
+.resize{
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  h2{
+    color: red;
+  }
+    
+}
+
+/*Home*/
+.slideshow{
+  display: flex;
+  height: 60vh;
+  width: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("/public/boba.jpg");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome{
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  text-align: center;
+  width: 35%;
+  /* height: 45%; */
+  margin-bottom: 3rem;
+  padding: 2.5em;
+}
+
+.welcome h1{
+  font-size: 3rem;
+  font-family: 'Merriweather', serif;
+}
+
+.welcome p{
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+  color: white;
+}
+
+.style-button{
+  /* font-size: 130%; */
+  color: black;
+  background-color: rgba(250, 250, 250, 1);
+  display: inline-block;
+  width: 30%;
+  height: 30%;
+  padding: 0.3em 1em;
+  margin: 0px -3em;
+  text-align: center;
+  transition: background-color 0.2s ease-out 50ms;
+}
+
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.style-button h3{
+  font-size: 1.2rem;
+}
+
+.style-button:hover{
+  background-color:rgb(214, 214, 214);
+}
+
+/*Home: Gallery*/
+.gallery-container{
+  width: 60%;
+  margin: auto;
+}
+
+.gallery-container h1{
+  text-align: center;
+  margin: 4rem auto 0;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 8px solid black;
+}
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem 1rem;
+}
+
+.gallery-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Review Section*/
+.main-review-section{
+  margin: 4rem auto 0;
+  height: auto;
+  background-color: rgb(214, 214, 214);
+  text-align: center;
+  padding-bottom: 4.5rem;
+}
+
+.main-review-section h1{
+  padding-top: 2rem;
+}
+
+.review-section{
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin-top: 3%;
+  width: 30%;
+}
+
+.doordash{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.yelp{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.google{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.review-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.service-img-size{
+  width: 2rem;
+  height: 2rem;
+}
+
+.review-header h2{
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.review-image{
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  object-fit: contain;
+}
+
+#star{
+  font-size: 1.5rem;
+}
+
+.review-img-size{
+  margin: auto;
+  width: 50%;
+  height: 15rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/*Footer*/
+.footer-section{
+  display: flex;
+  justify-content: space-around;
+  height: 15rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/public/footerboba.jpg");
+  background-repeat: round no-repeat;
+  background-position-y: 40%;
+}
+
+.spades-map{
+  float: left;
+  width: 25%;
+  padding: 1rem;
+}
+
+.hours-section h2{
+  text-align: center;
+  color: white;
+}
