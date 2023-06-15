@@ -9,7 +9,7 @@
 }
 
 .main-wrapper{
-  min-width: 1200px;
+  min-width: 375px;
 }
 
 /*Navbar*/
@@ -36,6 +36,7 @@
 .dummy{
   background-color: red;
   opacity: 0;
+  /* margin-right: auto; */
 }
 
 .navbar{
@@ -60,12 +61,8 @@ h1.link {
   margin-right: 0.5rem;
 }
 
-
-@media only screen and (max-width: 600px) {
-  h2{
-    color: red;
-  }
-    
+.socials{
+  min-width: 96px;
 }
 
 /*Home*/
@@ -86,11 +83,12 @@ h1.link {
   width: 35%;
   /* height: 45%; */
   margin-bottom: 3rem;
-  padding: 2.5em;
+  padding: 3%;
+  min-width: 305px;
 }
 
 .welcome h1{
-  font-size: 3rem;
+  font-size: 300%;
   font-family: 'Merriweather', serif;
 }
 
@@ -111,6 +109,9 @@ h1.link {
   margin: 0px -3em;
   text-align: center;
   transition: background-color 0.2s ease-out 50ms;
+  border: 2px solid rgb(0, 0, 0);
+  min-width: 97px;
+  cursor: pointer;
 }
 
 .button-container{
@@ -120,7 +121,7 @@ h1.link {
 }
 
 .style-button h3{
-  font-size: 1.2rem;
+  font-size: 100%;
 }
 
 .style-button:hover{
@@ -248,4 +249,164 @@ h1.link {
 .hours-section h2{
   text-align: center;
   color: white;
+}
+
+/*Nav responsive*/
+.nav-btn {
+  display: none;
+  visibility: visible;
+  opacity: 0;
+}
+
+#hamburger-resize{
+  display: none;
+  text-align: center;
+}
+
+.mobile-navbar{
+  background-color: rgb(224, 222, 222);
+  width: 40vh;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  right: 100%;
+  transition: 0.4s;
+}
+
+.mobile-navbar.mobile-active{
+  transform: translateX(40vh);
+}
+
+.mobile-link{
+  margin: 59px auto;
+}
+
+.tablet-delete{
+  display: none;
+}
+
+/* RESIZE*/
+@media only screen and (max-width: 1125px){
+  .button-container{
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .style-button{
+    display: block;
+    margin: auto;
+  }
+
+  .order-button{
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .dummy{
+    display: none;
+  }
+
+  .nav-btn {
+    opacity: 1;
+    display: block;
+    /* position: fixed; */
+    margin: auto;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    transform: scale(1.2, 1);
+    z-index: 99;
+	}
+
+  .nav-close-btn{
+    position: fixed;
+    z-index: 99;
+  }
+
+  #hamburger-resize{
+    width: 96px;
+    height: 25.8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+  }
+
+  .welcome h1{
+    font-size: 200%;
+    font-family: 'Merriweather', serif;
+  }
+
+  .link{
+    display: none;
+  }
+
+  .main-navbar{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .resize{
+    margin: auto 2px;
+  }
+
+  .welcome p{
+    margin-top: 1em;
+    margin-bottom: 1.75em;
+    color: white;
+  }
+
+  .socials{
+    visibility: hidden;
+  }
+
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-img {
+    display: block;
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+  }
+
+  .review-section{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .review-img-size{
+    height: auto;
+  }
+
+  .review-wrapper{
+    max-width: 70%;
+  }
+
+  .review-image{
+    margin: auto;
+  }
+
+  .main-review-section{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .main-review-section h1 {
+    padding-bottom: 1rem;
+  }
 }

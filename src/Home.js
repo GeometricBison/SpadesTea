@@ -9,14 +9,16 @@ const ReviewSection = (props) =>{
   const review = 
   <>
     <div className="review-section">
-      <div className="review-header">
-        <div className="service-img-size">
-          <ReviewImage source={props.source}/>
+      <div className="review-wrapper">
+        <div className="review-header">
+          <div className="service-img-size">
+            <ReviewImage source={props.source}/>
+          </div>
+          <h2>{props.name}</h2>
         </div>
-        <h2>{props.name}</h2>
+        <p><b>"</b>omg so good, so smaple textsmaple textsmaple textsmaple textsmaple textsmaple textsmaple text<b>"</b></p>
+        <p id="star">★★★★★</p>
       </div>
-      <p><b>"</b>omg so good, so smaple textsmaple textsmaple textsmaple textsmaple textsmaple textsmaple text<b>"</b></p>
-      <p id="star">★★★★★</p>
       <div className="review-img-size">
         <img src={"review" + props.review + ".jpg"} className="review-image"></img>
       </div>
@@ -32,7 +34,7 @@ const Home = () =>
       <div className = "slideshow"> 
         <div className = "welcome">
           <h1>NOW OPEN!</h1>
-          <p>Try our new boba drinks at park to bruh</p>
+          <p>Try our new boba drinks at park to shop!</p>
           <div className="button-container">
             <div className="style-button"><h3>MENU</h3></div>
             <div className="style-button order-button"><h3>ORDER</h3></div>
