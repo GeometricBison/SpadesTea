@@ -1,22 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import {Link} from 'react-router-dom';
+import {orderlink} from './App.js';
+import {linkStyle} from './App.js';
+import Home from './Home.js';
+import Scroll from 'react-scroll'
 
-
+const ScrollLink = Scroll.Link;
 
 const Navbar = () =>
 {
-  const navRef = useRef();
-
-  const showNavbar = () => {
-    if(navRef.current.classList.contains("logo-header") == false)
-    {
-      navRef.current.classList.toggle(
-        "responsive_nav"
-      );
-    }
-  };
-
   const [isTablet, setIsTablet] = useState(window.innerWidth > 768);
 
   const [show, setShow] = useState(false);
@@ -59,31 +53,26 @@ const Navbar = () =>
         </div>
          
         <ul className={`mobile-navbar ${show ? 'mobile-active' : ''} ${isTablet ? 'tablet-delete' : ''}`}>
-          <li className = "mobile-link">Home</li>
-          <li className = "mobile-link">About</li>
-          <li className = "mobile-link">Menu</li>
-          <li className = "mobile-link">Contact</li>
+          <li className = "mobile-link"><Link to="/" style={linkStyle}>Home</Link></li>
+          <li className = "mobile-link">Order</li>
+          <li className = "mobile-link"><a href="spadesmenu.jpg" target="_blank" style={linkStyle}>Menu</a></li>
           <a href="https://www.instagram.com/spades.tealife.aurora/?hl=en"><img src="instalogo.png" className="resize" alt="instagram"/></a>
           <a href="https://www.tiktok.com/@spades.tealife.aurora"><img src="tiktoklogo.png" className="resize" alt="titkok"/></a>
-          <img src="facebooklogo.png" className="resize" alt="facebook"/>
+          {/* <img src="facebooklogo.png" className="resize" alt="facebook"/> */}
         </ul>
 
         <ul className = "navbar">
-          <li className = "link">Home</li>
-          <li className = "link">About</li>
-          <img src="logo.png" className="logo-header"/>
-          <li className = "link">Menu</li>
-          <li className = "link">Contact</li>
-
-          {/* <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <FaTimes/>
-          </button> */}
-
+          <li className = "link"><Link to="/" className="underline-anim" style={linkStyle}>Home</Link></li>
+          <li className = "link"><a href={orderlink} className="underline-anim" target="_blank" style={linkStyle}>Order</a></li>
+          <Link to="/" className="underline-anim"><img src="logo.png" className="logo-header"/></Link>
+          <li className = "link"><a href="spadesmenu.jpg" className="underline-anim" target="_blank" style={linkStyle}>Menu</a></li>
+          <li className = "link"><ScrollLink to="footer-scroll" smooth='easeInQuad' className="underline-anim">Contact</ScrollLink></li>
         </ul>
+
         <div className = "socials">
           <a href="https://www.instagram.com/spades.tealife.aurora/?hl=en"><img src="instalogo.png" className="resize" alt="instagram"/></a>
           <a href="https://www.tiktok.com/@spades.tealife.aurora"><img src="tiktoklogo.png" className="resize" alt="titkok"/></a>
-          <img src="facebooklogo.png" className="resize"/>
+          {/* <img src="facebooklogo.png" className="resize"/> */}
         </div>
       </div>
     </nav>

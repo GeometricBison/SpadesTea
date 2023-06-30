@@ -1,4 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
+import {Link} from 'react-router-dom';
+import {orderlink} from './App.js';
+import {linkStyle} from './App.js';
 
 const ReviewImage = (props) => {
   const image = <img src={props.source + ".png"} className={props.source}></img>
@@ -36,8 +39,8 @@ const Home = () =>
           <h1>NOW OPEN!</h1>
           <p>Try our new boba drinks at park to shop!</p>
           <div className="button-container">
-            <div className="style-button"><h3>MENU</h3></div>
-            <div className="style-button order-button"><h3>ORDER</h3></div>
+            <div className="style-button"><a href="spadesmenu.jpg" className="button-link" target="_blank" style={linkStyle}><h3>MENU</h3></a></div>
+            <div className="style-button order-button"><a href={orderlink} className="button-link" target="_blank" style={linkStyle}><h3>ORDER</h3></a></div>
           </div>
         </div>
       </div>
@@ -48,6 +51,9 @@ const Home = () =>
           <img className="gallery-img" src="orange.png"></img>
           <img className="gallery-img" src="mint.png"></img>
           <img className="gallery-img" src="strawberry.png"></img>
+          <img className="gallery-img" src="peach.png"></img>
+          <img className="gallery-img" src="lemon.png"></img>
+          <img className="gallery-img" src="mango.png"></img>
         </div>
       </div>
 
@@ -58,15 +64,7 @@ const Home = () =>
         <ReviewSection source="google" review="4" name="Mei Fong"/>
       </div>
 
-      <div className="footer-section">
-        <iframe src="https://snazzymaps.com/embed/497696" width="100%" height="100%" style={{border: 0}} className="spades-map" title="tea-map"></iframe>
-        <div className="hours-section">
-          <h2>STORE HOURS</h2>
-        </div>
-        <div className="contact-section">
-          <h2>STORE HOURS</h2>
-        </div>
-      </div>
+
     </div>
   )
 }

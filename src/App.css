@@ -20,6 +20,7 @@
   display: inline-block;
   padding: 0.5rem;
   text-align: center;
+  transition: background-color 2s ease-out 100ms;
 }
 
 .main-navbar{
@@ -36,7 +37,6 @@
 .dummy{
   background-color: red;
   opacity: 0;
-  /* margin-right: auto; */
 }
 
 .navbar{
@@ -46,7 +46,7 @@
   justify-content: space-evenly;
 }
 
-h1.link {
+h1.link{
   font-size: 3rem;
   width: auto;
 }
@@ -65,6 +65,29 @@ h1.link {
   min-width: 96px;
 }
 
+.underline-anim{
+  position: relative;
+  cursor: pointer;
+}
+
+.underline-anim::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.underline-anim:hover::after,
+.underline-anim:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
 /*Home*/
 .slideshow{
   display: flex;
@@ -81,10 +104,10 @@ h1.link {
   background: rgba(0, 0, 0, 0.45);
   text-align: center;
   width: 35%;
-  /* height: 45%; */
   margin-bottom: 3rem;
   padding: 3%;
   min-width: 305px;
+  max-height: 100%;
 }
 
 .welcome h1{
@@ -99,13 +122,11 @@ h1.link {
 }
 
 .style-button{
-  /* font-size: 130%; */
   color: black;
   background-color: rgba(250, 250, 250, 1);
   display: inline-block;
   width: 30%;
   height: 30%;
-  padding: 0.3em 1em;
   margin: 0px -3em;
   text-align: center;
   transition: background-color 0.2s ease-out 50ms;
@@ -126,6 +147,12 @@ h1.link {
 
 .style-button:hover{
   background-color:rgb(214, 214, 214);
+}
+
+.button-link{
+  display: inline-block;
+  padding: 0.3em 1em;
+  width: 100%;
 }
 
 /*Home: Gallery*/
@@ -211,7 +238,7 @@ h1.link {
 }
 
 .review-image{
-  width: 100%;
+  width: 95%;
   height: 100%;
   margin-top: 1rem;
   object-fit: contain;
@@ -232,23 +259,47 @@ h1.link {
 
 /*Footer*/
 .footer-section{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
   height: 15rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/public/footerboba.jpg");
   background-repeat: round no-repeat;
-  background-position-y: 40%;
 }
 
 .spades-map{
   float: left;
-  width: 25%;
+  width: 100%;
   padding: 1rem;
 }
 
-.hours-section h2{
+.footer-content{
   text-align: center;
   color: white;
+}
+
+.footer-content h2{
+  font-size: 1.8rem;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  width: auto;
+}
+
+.footer-content h3{
+  font-size: 1rem;
+}
+
+.footer-wrapper{
+  margin-bottom: 5%;
+}
+
+/*Menu Page*/
+
+#main-menu{
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 50%;
 }
 
 /*Nav responsive*/
@@ -274,6 +325,7 @@ h1.link {
   text-transform: uppercase;
   right: 100%;
   transition: 0.4s;
+  z-index: 98;
 }
 
 .mobile-navbar.mobile-active{
@@ -304,6 +356,10 @@ h1.link {
 
   .order-button{
     margin-top: 5%;
+  }
+
+  .welcome h1{
+    font-size: 200%;
   }
 }
 
@@ -387,6 +443,7 @@ h1.link {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin-top: 9%;
   }
 
   .review-img-size{
@@ -409,4 +466,32 @@ h1.link {
   .main-review-section h1 {
     padding-bottom: 1rem;
   }
+
+  .footer-content h2{
+    font-size: 1rem;
+    margin-bottom: 13%;
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape){
+  .welcome{
+    margin-bottom: 0;
+  }
+
+  .welcome h1{
+    font-size: 150%;
+    margin-top: 4%;
+  }
+
+  .style-button h3 {
+    font-size: 70%;
+  }
+
+.welcome p {
+  margin-top: 1.5em;
+  margin-bottom: 5%;
+  color: white;
+  }
+
 }
