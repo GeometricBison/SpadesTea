@@ -2,7 +2,6 @@ import React, {useRef, useState} from 'react';
 import './App.css';
 import Navbar from './Navbar.js';
 import Home from './Home.js';
-import Menu from './Menu.js';
 import Footer from './Footer.js';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
@@ -28,7 +27,6 @@ const App = () =>
             <Routes>
               <Route index element = {<><Home/> <Footer/></>}/>
               <Route path="/home" element = {<><Home/> <Footer/></>}/>
-              <Route path="/menu" element = {<Menu/>}/>
               <Route path="*" element={<Navigate to="/"/>} />
             </Routes>
         </div>
