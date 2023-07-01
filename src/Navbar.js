@@ -54,7 +54,7 @@ const Navbar = () =>
          
         <ul className={`mobile-navbar ${show ? 'mobile-active' : ''} ${isTablet ? 'tablet-delete' : ''}`}>
           <li className = "mobile-link"><Link to="/" style={linkStyle}>Home</Link></li>
-          <li className = "mobile-link">Order</li>
+          <li className = "mobile-link"><a href={orderlink} target="_blank" style={linkStyle}>Order</a></li>
           <li className = "mobile-link"><a href="spadesmenu.jpg" target="_blank" style={linkStyle}>Menu</a></li>
           <a href="https://www.instagram.com/spades.tealife.aurora/?hl=en"><img src="instalogo.png" className="resize" alt="instagram"/></a>
           <a href="https://www.tiktok.com/@spades.tealife.aurora"><img src="tiktoklogo.png" className="resize" alt="titkok"/></a>

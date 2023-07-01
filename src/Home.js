@@ -19,7 +19,7 @@ const ReviewSection = (props) =>{
           </div>
           <h2>{props.name}</h2>
         </div>
-        <p><b>"</b>omg so good, so smaple textsmaple textsmaple textsmaple textsmaple textsmaple textsmaple text<b>"</b></p>
+        <p class="review-desc"><b>"</b>{props.reviewcontent}<b>"</b></p>
         <p id="star">★★★★★</p>
       </div>
       <div className="review-img-size">
@@ -59,9 +59,9 @@ const Home = () =>
 
       <div className="main-review-section">
         <h1>OUR CUSTOMERS SAY</h1>
-        <ReviewSection source="yelp" review="1" name="Mei Fong"/>
-        <ReviewSection source="doordash" review="2" name="Mei Fong"/>
-        <ReviewSection source="google" review="4" name="Mei Fong"/>
+        <ReviewSection source="yelp" review="1" name="Mei Fong" reviewcontent="So good! The staff was friendly and they're drinks are delicious! Not too sweet which is what I like!"/>
+        <ReviewSection source="doordash" review="2" name="Mei Fong" reviewcontent="Tasty! Drinks tasted even better they looked! The strawberry flavor is amazing!"/>
+        <ReviewSection source="google" review="4" name="Mei Fong" reviewcontent="Our group enjoyed all of our drinks! The favorites were peach oolong and classic milk tea!"/>
       </div>
 
 
