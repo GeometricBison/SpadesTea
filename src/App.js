@@ -23,10 +23,9 @@ const App = () =>
     <BrowserRouter>
       <div className = 'App'> 
         <div className = "main-wrapper">
-            <Navbar/>
             <Routes>
-              <Route index element = {<><Home/> <Footer/></>}/>
-              <Route path="/home" element = {<><Home/> <Footer/></>}/>
+              <Route index element = {<> <Navbar/> <Home/> <Footer/></>}/>
+              <Route path="/home" element = {<><Navbar/> <Home/> <Footer/></>}/>
               <Route path="*" element={<Navigate to="/"/>} />
             </Routes>
         </div>
