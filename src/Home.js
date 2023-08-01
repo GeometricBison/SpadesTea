@@ -60,8 +60,8 @@ const Home = () =>
       <div className="main-review-section">
         <h1>OUR CUSTOMERS SAY</h1>
         <ReviewSection source="yelp" review="1" name="Mei Fong" reviewcontent="So good! The staff was friendly and they're drinks are delicious! Not too sweet which is what I like!"/>
-        <ReviewSection source="doordash" review="2" name="Mei Fong" reviewcontent="Tasty! Drinks tasted even better they looked! The strawberry flavor is amazing!"/>
-        <ReviewSection source="google" review="4" name="Mei Fong" reviewcontent="Our group enjoyed all of our drinks! The favorites were peach oolong and classic milk tea!"/>
+        <ReviewSection source="doordash" review="2" name="Ben S" reviewcontent="Tasty! Drinks tasted even better they looked! The strawberry flavor is amazing!"/>
+        <ReviewSection source="google" review="4" name="Danielle Pham" reviewcontent="Our group enjoyed all of our drinks! The favorites were peach oolong and classic milk tea!"/>
       </div>
 
 
